@@ -1,0 +1,17 @@
+[
+{
+  "modid": "epic.zirc",
+  "name": "Zirconium Mod",
+  "description": "A mod with Zirconium, Zir-CONEY-um, and Zir-CONEY-CONEY-CONEY-um gems and blocks!",
+  "version": "0.0.1",
+  "mcversion": "1.5.2",
+  "logoFile": "/splash.png",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["epicfaace"],
+  "credits": "",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

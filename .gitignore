@@ -1,0 +1,4 @@
+/forge 1.5.2/
+/forge/
+!forge 1.5.2/mcp/src/minecraft/epic/*
+!forge/mcp/src/minecraft/epic/*
