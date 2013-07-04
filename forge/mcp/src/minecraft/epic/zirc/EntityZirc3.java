@@ -16,7 +16,7 @@ import cpw.mods.fml.common.registry.IThrowableEntity;
 
 public class EntityZirc3 extends EntityThrowable
 {
-    public EntityZirc3(World par1World)
+	public EntityZirc3(World par1World)
     {
         super(par1World);
     }
@@ -37,34 +37,17 @@ public class EntityZirc3 extends EntityThrowable
 	 */
 	protected void onImpact(MovingObjectPosition par1MovingObjectPosition)
 	{
+		this.worldObj.spawnParticle("smoke", this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D);
+		//float f = 4.0F;
+		float f = (float) Math.random()*3+3; //from 3 to 6, not an integer
+        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
 		if (par1MovingObjectPosition.entityHit != null)
 		{
-			Entity ent = par1MovingObjectPosition.entityHit;
-			byte b0 = 10; //damage
+			par1MovingObjectPosition.entityHit.setDead();
+			/*byte b0 = 6; //damage
 			//damage set death message Ñ LATER!
 			par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
-			par1MovingObjectPosition.entityHit.setFire(30);
-			par1MovingObjectPosition.entityHit.setCurrentItemOrArmor(0, new net.minecraft.item.ItemStack(Item.swordDiamond));
-			int par1=0;
-			double par2=ent.posX;
-			double par4=ent.posY + (double)ent.getEyeHeight() * 0.5D;
-			double par6=ent.posZ;
-			boolean par8=par1 == 0 && this.rand.nextFloat() < 0.001F;
-			
-	        this.worldObj.playAuxSFXAtEntity((EntityPlayer)null, 1014, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
-	        double d3 = this.posX;
-	        double d4 = par1 <= 0 ? this.posY + 3.0D : this.posY + 2.2D;
-	        double d5 = this.posZ;
-	        double d6 = par2 - d3;
-	        double d7 = par4 - d4;
-	        double d8 = par6 - d5;
-	        EntityWitherSkull entitywitherskull = new net.minecraft.entity.projectile.EntityWitherSkull(this.worldObj);
-	        
-			entitywitherskull.setInvulnerable(true);
-	        entitywitherskull.posY = d4;
-	        entitywitherskull.posX = d3;
-	        entitywitherskull.posZ = d5;
-			this.worldObj.spawnEntityInWorld(entitywitherskull);
+			par1MovingObjectPosition.entityHit.setFire(30);*/
 		}
 		else
 		{
@@ -73,10 +56,6 @@ public class EntityZirc3 extends EntityThrowable
 			//System.out.println(par1MovingObjectPosition.sideHit);
 		}
 
-		for (int i = 0; i < 8; ++i)
-		{
-			this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
-		}
 		
 		if (par1MovingObjectPosition.entityHit != null&&!this.worldObj.isRemote)
 		{

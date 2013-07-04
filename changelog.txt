@@ -1,11 +1,15 @@
 Future
 -Will change block IDs to not conflict
+-ZircGem + ZircBlock = Bigger Explosion
 
+1.1.0 - 1.6.1
+ZircGem3 causes an explosion
+You can pick up ZircGem1/2, but they somehow drop two
 
-1.0.1 - 1.6.1
+1.0.0 - 1.6.1
 Updated for MC 1.6.1
 
-1.0.0 - 1.5.2
+1.0.0 - 1.5.2 (never released)
 -You can craft Zirc blocks back into 9 of their respective gems
 -Zirc Gems shot like snowballs
 

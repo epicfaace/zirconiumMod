@@ -25,7 +25,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid="epic.zirc", name="Zirconium Mod", version="1.0.0")
+@Mod(modid="epic.zirc", name="Zirconium Mod", version="1.1.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Zirc {
 	public final static Item zirconiumGem = new ZirconiumGem(2177).setUnlocalizedName("gemZirconium");
