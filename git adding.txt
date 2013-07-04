@@ -1,0 +1,3 @@
+git add -A forge/mcp/src/minecraft/epic
+
+git add -u (just adds modifications, not new files)

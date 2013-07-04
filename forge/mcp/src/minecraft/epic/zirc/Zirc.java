@@ -28,7 +28,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid="epic.zirc", name="Zirconium Mod", version="1.0.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Zirc {
-	public final static Item zirconiumGem = new ZirconiumGem(2177);
+	public final static Item zirconiumGem = new ZirconiumGem(2177).setUnlocalizedName("gemZirconium");
 	public final static Item zirconiumGem2 = new ZirconiumGem(2178).setUnlocalizedName("gemZirconium2");
 	public final static Item zirconiumGem3 = new ZirconiumGem(2179).setUnlocalizedName("gemZirconium3");
 	public final static Block zirconiumOre = new ZirconiumOre(2180, Material.iron);
