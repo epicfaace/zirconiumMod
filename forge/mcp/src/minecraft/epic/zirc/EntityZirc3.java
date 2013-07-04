@@ -5,7 +5,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.entity.projectile.EntityWitherSkull;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
@@ -37,13 +39,32 @@ public class EntityZirc3 extends EntityThrowable
 	{
 		if (par1MovingObjectPosition.entityHit != null)
 		{
-			
-			byte b0 = 5; //damage
+			Entity ent = par1MovingObjectPosition.entityHit;
+			byte b0 = 10; //damage
 			//damage set death message Ñ LATER!
 			par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
 			par1MovingObjectPosition.entityHit.setFire(30);
-			par1MovingObjectPosition.entityHit.setInWeb();
+			par1MovingObjectPosition.entityHit.setCurrentItemOrArmor(0, new net.minecraft.item.ItemStack(Item.swordDiamond));
+			int par1=0;
+			double par2=ent.posX;
+			double par4=ent.posY + (double)ent.getEyeHeight() * 0.5D;
+			double par6=ent.posZ;
+			boolean par8=par1 == 0 && this.rand.nextFloat() < 0.001F;
 			
+	        this.worldObj.playAuxSFXAtEntity((EntityPlayer)null, 1014, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
+	        double d3 = this.posX;
+	        double d4 = par1 <= 0 ? this.posY + 3.0D : this.posY + 2.2D;
+	        double d5 = this.posZ;
+	        double d6 = par2 - d3;
+	        double d7 = par4 - d4;
+	        double d8 = par6 - d5;
+	        EntityWitherSkull entitywitherskull = new net.minecraft.entity.projectile.EntityWitherSkull(this.worldObj);
+	        
+			entitywitherskull.setInvulnerable(true);
+	        entitywitherskull.posY = d4;
+	        entitywitherskull.posX = d3;
+	        entitywitherskull.posZ = d5;
+			this.worldObj.spawnEntityInWorld(entitywitherskull);
 		}
 		else
 		{

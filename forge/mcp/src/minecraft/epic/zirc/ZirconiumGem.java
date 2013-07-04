@@ -41,15 +41,15 @@ public class ZirconiumGem extends Item {
 
         if (!par2World.isRemote)
         {
-        	if (this.getUnlocalizedName()=="gemZirconium")
+        	if (this.getUnlocalizedName().equals("item.gemZirconium"))
             {
         		par2World.spawnEntityInWorld(new EntityZirc(par2World, par3EntityPlayer));
             }
-        	else if (this.getUnlocalizedName()=="gemZirconium2")
+        	else if (this.getUnlocalizedName().equals("item.gemZirconium2"))
             {
         		par2World.spawnEntityInWorld(new EntityZirc2(par2World, par3EntityPlayer));
             }
-        	else if (this.getUnlocalizedName()=="gemZirconium3")
+        	else if (this.getUnlocalizedName().equals("item.gemZirconium3"))
             {
         		par2World.spawnEntityInWorld(new EntityZirc3(par2World, par3EntityPlayer));
             }

@@ -6,6 +6,7 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.entity.projectile.EntityWitherSkull;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
@@ -37,7 +38,6 @@ public class EntityZirc extends EntityThrowable
 	{
 		if (par1MovingObjectPosition.entityHit != null)
 		{
-			
 			byte b0 = 3; //damage
 			//damage set death message Ñ LATER!
 			par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
