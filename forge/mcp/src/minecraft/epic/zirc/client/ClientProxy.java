@@ -12,6 +12,8 @@ public class ClientProxy extends CommonProxy {
                 //MinecraftForgeClient.preloadTexture(ITEMS_PNG);
                 //MinecraftForgeClient.preloadTexture(BLOCK_PNG);
                 RenderingRegistry.registerEntityRenderingHandler(epic.zirc.EntityZirc.class, new net.minecraft.client.renderer.entity.RenderSnowball(epic.zirc.Zirc.zirconiumGem));
+                RenderingRegistry.registerEntityRenderingHandler(epic.zirc.EntityZirc2.class, new net.minecraft.client.renderer.entity.RenderSnowball(epic.zirc.Zirc.zirconiumGem2));
+                RenderingRegistry.registerEntityRenderingHandler(epic.zirc.EntityZirc3.class, new net.minecraft.client.renderer.entity.RenderSnowball(epic.zirc.Zirc.zirconiumGem3));
         }
         
 }

@@ -12,20 +12,20 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.IThrowableEntity;
 
-public class EntityZirc extends EntityThrowable
+public class EntityZirc3 extends EntityThrowable
 {
-    public EntityZirc(World par1World)
+    public EntityZirc3(World par1World)
     {
         super(par1World);
     }
 
-    public EntityZirc(World par1World, EntityLivingBase par2EntityLivingBase)
+    public EntityZirc3(World par1World, EntityLivingBase par2EntityLivingBase)
     {
         super(par1World, par2EntityLivingBase);
         //this is called
     }
 
-    public EntityZirc(World par1World, double par2, double par4, double par6)
+    public EntityZirc3(World par1World, double par2, double par4, double par6)
     {
         super(par1World, par2, par4, par6);
     }
@@ -38,10 +38,11 @@ public class EntityZirc extends EntityThrowable
 		if (par1MovingObjectPosition.entityHit != null)
 		{
 			
-			byte b0 = 3; //damage
+			byte b0 = 5; //damage
 			//damage set death message Ñ LATER!
 			par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
-			//par1MovingObjectPosition.entityHit.setFire(15);
+			par1MovingObjectPosition.entityHit.setFire(30);
+			par1MovingObjectPosition.entityHit.setInWeb();
 			
 		}
 		else

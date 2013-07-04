@@ -1,11 +1,15 @@
 Future
 -Will change block IDs to not conflict
 
-1.0.0
+
+1.0.1 - 1.6.1
+Updated for MC 1.6.1
+
+1.0.0 - 1.5.2
 -You can craft Zirc blocks back into 9 of their respective gems
 -Zirc Gems shot like snowballs
 
-0.0.1
+0.0.1 - 1.5.2
 -Created mod
 -Zirc Gems shot like arrows
 -Zirc Ore generates naturally

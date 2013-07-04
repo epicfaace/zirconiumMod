@@ -90,7 +90,9 @@ public class Zirc {
 		GameRegistry.addShapelessRecipe(new ItemStack(zirconiumGem2, 9), new ItemStack(zirconiumBlock2));
 		GameRegistry.addShapelessRecipe(new ItemStack(zirconiumGem3, 9), new ItemStack(zirconiumBlock3));
 		
-		EntityRegistry.registerModEntity(EntityZirc.class, "ZircGem", 1, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityZirc.class, "EntZirc", 1, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityZirc2.class, "EntZirc", 1, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityZirc3.class, "EntZirc", 1, this, 64, 1, true);
 		
 	}
 
