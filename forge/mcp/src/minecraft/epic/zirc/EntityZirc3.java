@@ -37,10 +37,7 @@ public class EntityZirc3 extends EntityThrowable
 	 */
 	protected void onImpact(MovingObjectPosition par1MovingObjectPosition)
 	{
-		this.worldObj.spawnParticle("smoke", this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D);
-		//float f = 4.0F;
-		float f = (float) Math.random()*3+3; //from 3 to 6, not an integer
-        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
+		explode();
 		if (par1MovingObjectPosition.entityHit != null)
 		{
 			par1MovingObjectPosition.entityHit.setDead();
@@ -66,6 +63,13 @@ public class EntityZirc3 extends EntityThrowable
 		{
 			this.setDead();
 		}
+	}
+	public void explode()
+	{
+		//this.worldObj.spawnParticle("smoke", this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D);
+		//float f = 4.0F;
+		float f = (float) Math.random()*3+3; //from 3 to 6, not an integer
+        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
 	}
 
 

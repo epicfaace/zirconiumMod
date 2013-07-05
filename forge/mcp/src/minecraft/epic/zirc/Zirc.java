@@ -32,9 +32,9 @@ public class Zirc {
 	public final static Item zirconiumGem2 = new ZirconiumGem(2178).setUnlocalizedName("gemZirconium2");
 	public final static Item zirconiumGem3 = new ZirconiumGem(2179).setUnlocalizedName("gemZirconium3");
 	public final static Block zirconiumOre = new ZirconiumOre(2180, Material.iron);
-	public final static Block zirconiumBlock = new ZirconiumBlock(2181, Material.iron);
-	public final static Block zirconiumBlock2 = new ZirconiumBlock(2182, Material.iron).setUnlocalizedName("blockZirconium2");
-	public final static Block zirconiumBlock3 = new ZirconiumBlock(2183, Material.iron).setUnlocalizedName("blockZirconium3");
+	public final static Block zirconiumBlock = new ZirconiumBlock(2181, Material.iron).setPwr(1);
+	public final static Block zirconiumBlock2 = new ZirconiumBlock(2182, Material.iron).setPwr(2);
+	public final static Block zirconiumBlock3 = new ZirconiumBlock(2183, Material.iron).setPwr(3);
 
 	// The instance of your mod that Forge uses @Instance("[modid]")
 	@Instance("epic.zirc")
