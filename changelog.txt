@@ -1,5 +1,6 @@
 Future
 -Will change block IDs to not conflict
+-Bigger explosion ONLY if caused by ZircGem, not by TNT
 
 1.1.0 - 1.6.1
 -ZircGem3 causes an explosion
@@ -7,7 +8,7 @@ Future
 BUGS: You can pick up ZircGem1/2, but they somehow drop two
 
 1.0.0 - 1.6.1
-Updated for MC 1.6.1
+-Updated for MC 1.6.1
 
 1.0.0 - 1.5.2 (never released)
 -You can craft Zirc blocks back into 9 of their respective gems

@@ -1,4 +1,6 @@
 git add -A forge/mcp/src/minecraft/epic
 git add -A forge/mcp/src/minecraft/assets
 
-git add -u (just adds modifications, not new files)
+git add -u #(just adds modifications, not new files)
+
+git status -u no #(shows no untracked files)

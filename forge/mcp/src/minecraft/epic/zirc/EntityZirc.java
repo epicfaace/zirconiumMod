@@ -54,14 +54,18 @@ public class EntityZirc extends EntityThrowable
 			//par1MovingObjectPosition.hitVec.normalize();
 			//this.motionY*=-1;
 			//System.out.println(par1MovingObjectPosition.sideHit);
-			if (!dropped) {
+			if (dropped==false) {
+				System.out.println(dropped);
+				dropped=true;
+                float f = this.rand.nextFloat() * 0.8F + 0.1F;
+                float f1 = this.rand.nextFloat() * 0.8F + 0.1F;
+                float f2 = this.rand.nextFloat() * 0.8F + 0.1F;
 				EntityItem entityitem = new EntityItem(this.worldObj,
 						(double)this.posX,
 						(double)this.posY,
 						(double)this.posZ,
 						new ItemStack(epic.zirc.Zirc.zirconiumGem));
 				this.worldObj.spawnEntityInWorld(entityitem);
-				dropped=true;
 			}
 			this.setDead();
 		}
